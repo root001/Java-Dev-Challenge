@@ -14,10 +14,8 @@ public class SmallestPositive {
 
         for (int element : array) {
             int missingElement = element + 1;
-            if (missingElement > 0) {
-                if (!listMap.containsKey(missingElement)) {
-                    return missingElement;
-                }
+            if (missingElement > 0 && !listMap.containsKey(missingElement)) {
+                return missingElement;
             }
         }
         return 1;
